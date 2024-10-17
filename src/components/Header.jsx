@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link' // Import Link from Next.js
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -21,9 +22,10 @@ export default function Header() {
           Nariii
         </motion.h1>
         <nav className="hidden md:flex space-x-4">
-          <a href="#features" className="hover:text-purple-200">Features</a>
-          <a href="#resources" className="hover:text-purple-200">Resources</a>
-          <a href="#contact" className="hover:text-purple-200">Contact</a>
+          <Link href="#features" className="hover:text-purple-200">Features</Link>
+          <Link href="#resources" className="hover:text-purple-200">Resources</Link>
+          {/* Use Link to navigate to the contact page */}
+          <Link href="/contact" className="hover:text-purple-200">Contact</Link>
         </nav>
         <button onClick={toggleMenu} className="md:hidden">
           {isMenuOpen ? <X /> : <Menu />}
@@ -37,9 +39,9 @@ export default function Header() {
           exit={{ opacity: 0, y: -20 }}
           className="md:hidden bg-purple-700 py-2"
         >
-          <a href="#features" className="block px-4 py-2 hover:bg-purple-600">Features</a>
-          <a href="#resources" className="block px-4 py-2 hover:bg-purple-600">Resources</a>
-          <a href="#contact" className="block px-4 py-2 hover:bg-purple-600">Contact</a>
+          <Link href="#features" className="block px-4 py-2 hover:bg-purple-600">Features</Link>
+          <Link href="#resources" className="block px-4 py-2 hover:bg-purple-600">Resources</Link>
+          <Link href="/contact" className="block px-4 py-2 hover:bg-purple-600">Contact</Link>
         </motion.div>
       )}
     </header>
