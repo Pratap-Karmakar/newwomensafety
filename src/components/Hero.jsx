@@ -14,6 +14,9 @@ export default function Hero() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Empowering Women's Safety</h2>
           <p className="text-xl mb-8">Your personal guardian for a safer world</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Mission</h1>
+          <p className="text-xl mb-8">
+          Designing cities where every woman's voice is heard.</p>
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

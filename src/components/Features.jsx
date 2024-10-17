@@ -1,14 +1,17 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Book, Phone } from 'lucide-react'
+import { Shield, Book, Phone, Video, Mic } from 'lucide-react';
 
 export default function Features() {
-  const features = [
-    { icon: <Shield className="w-12 h-12 mb-4 text-purple-600" />, title: "24/7 Protection", description: "Round-the-clock monitoring and alert system" },
-    { icon: <Book className="w-12 h-12 mb-4 text-purple-600" />, title: "Safety Education", description: "Comprehensive resources and training materials" },
-    { icon: <Phone className="w-12 h-12 mb-4 text-purple-600" />, title: "Emergency Contacts", description: "Quick access to your trusted contacts" },
-  ]
+    const features = [
+        { icon: <Shield className="w-12 h-12 mb-4 text-purple-600" />, title: "24/7 Protection", description: "Round-the-clock monitoring and alert system" },
+        { icon: <Book className="w-12 h-12 mb-4 text-purple-600" />, title: "Safety Education", description: "Comprehensive resources and training materials" },
+        { icon: <Phone className="w-12 h-12 mb-4 text-purple-600" />, title: "Emergency Contacts", description: "Quick access to your trusted contacts" },
+        { icon: <Video className="w-12 h-12 mb-4 text-purple-600" />, title: "Video Recording", description: "Capture high-quality video during incidents" },
+        { icon: <Mic className="w-12 h-12 mb-4 text-purple-600" />, title: "Audio Recording", description: "Record clear audio for evidence and analysis" }
+      ];
+      
 
   return (
     <section id="features" className="py-20">

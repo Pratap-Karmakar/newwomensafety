@@ -18,7 +18,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
           className="text-2xl font-bold"
         >
-          SafeHer
+          Nariii
         </motion.h1>
         <nav className="hidden md:flex space-x-4">
           <a href="#features" className="hover:text-purple-200">Features</a>

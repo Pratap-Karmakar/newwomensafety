@@ -1,9 +1,11 @@
-import ContactForm from "@/components/ContactForm";
+
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import OurServices from "@/components/OurServices";
 import Resources from "@/components/Resources";
+import WhatIsNariii from "@/components/WhatIsNariii";
 
 
 export default function WomenSafetyWebsite() {
@@ -12,8 +14,9 @@ export default function WomenSafetyWebsite() {
       <Header />
       <Hero />
       <Features />
+      <WhatIsNariii/>
+      <OurServices/>
       <Resources />
-      <ContactForm />
       <Footer />
     </div>
   )
