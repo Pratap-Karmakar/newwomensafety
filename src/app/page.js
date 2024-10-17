@@ -1,101 +1,204 @@
-import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Resources from "@/components/Resources";
 
-export default function Home() {
+
+export default function WomenSafetyWebsite() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="min-h-screen bg-purple-50">
+      <Header />
+      <Hero />
+      <Features />
+      <Resources />
+      <ContactForm />
+      <Footer />
     </div>
-  );
+  )
 }
+
+
+// 'use client'
+
+// import { useState } from 'react'
+// import { motion } from 'framer-motion'
+// import { Menu, X, Shield, Book, Phone, ChevronRight } from 'lucide-react'
+
+// export default function WomenSafetyWebsite() {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+//   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+//   return (
+//     <div className="min-h-screen bg-purple-50">
+//       {/* Header */}
+//       <header className="bg-purple-800 text-white">
+//         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+//           <motion.h1 
+//             initial={{ opacity: 0, y: -20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.5 }}
+//             className="text-2xl font-bold"
+//           >
+//             SafeHer
+//           </motion.h1>
+//           <nav className="hidden md:flex space-x-4">
+//             <a href="#features" className="hover:text-purple-200">Features</a>
+//             <a href="#resources" className="hover:text-purple-200">Resources</a>
+//             <a href="#contact" className="hover:text-purple-200">Contact</a>
+//           </nav>
+//           <button onClick={toggleMenu} className="md:hidden">
+//             {isMenuOpen ? <X /> : <Menu />}
+//           </button>
+//         </div>
+//         {/* Mobile menu */}
+//         {isMenuOpen && (
+//           <motion.div 
+//             initial={{ opacity: 0, y: -20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             exit={{ opacity: 0, y: -20 }}
+//             className="md:hidden bg-purple-700 py-2"
+//           >
+//             <a href="#features" className="block px-4 py-2 hover:bg-purple-600">Features</a>
+//             <a href="#resources" className="block px-4 py-2 hover:bg-purple-600">Resources</a>
+//             <a href="#contact" className="block px-4 py-2 hover:bg-purple-600">Contact</a>
+//           </motion.div>
+//         )}
+//       </header>
+
+//       {/* Hero Section */}
+//       <section className="py-20 bg-gradient-to-b from-purple-800 to-purple-600 text-white">
+//         <div className="container mx-auto px-4">
+//           <motion.div 
+//             initial={{ opacity: 0, y: 20 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.5, delay: 0.2 }}
+//             className="text-center"
+//           >
+//             <h2 className="text-4xl md:text-5xl font-bold mb-4">Empowering Women's Safety</h2>
+//             <p className="text-xl mb-8">Your personal guardian for a safer world</p>
+//             <motion.button 
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.95 }}
+//               className="bg-white text-purple-800 font-bold py-2 px-6 rounded-full hover:bg-purple-100 transition duration-300"
+//             >
+//               Get Started
+//             </motion.button>
+//           </motion.div>
+//         </div>
+//       </section>
+
+//       {/* Features Section */}
+//       <section id="features" className="py-20">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold text-center mb-12 text-purple-800">Our Features</h2>
+//           <div className="grid md:grid-cols-3 gap-8">
+//             {[
+//               { icon: <Shield className="w-12 h-12 mb-4 text-purple-600" />, title: "24/7 Protection", description: "Round-the-clock monitoring and alert system" },
+//               { icon: <Book className="w-12 h-12 mb-4 text-purple-600" />, title: "Safety Education", description: "Comprehensive resources and training materials" },
+//               { icon: <Phone className="w-12 h-12 mb-4 text-purple-600" />, title: "Emergency Contacts", description: "Quick access to your trusted contacts" },
+//             ].map((feature, index) => (
+//               <motion.div 
+//                 key={index}
+//                 initial={{ opacity: 0, y: 20 }}
+//                 animate={{ opacity: 1, y: 0 }}
+//                 transition={{ duration: 0.5, delay: index * 0.1 }}
+//                 className="bg-white p-6 rounded-lg shadow-lg text-center"
+//               >
+//                 {feature.icon}
+//                 <h3 className="text-xl font-semibold mb-2 text-purple-800">{feature.title}</h3>
+//                 <p className="text-gray-600">{feature.description}</p>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Resources Section */}
+//       <section id="resources" className="py-20 bg-purple-100">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold text-center mb-12 text-purple-800">Safety Resources</h2>
+//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+//             {[
+//               "Self-Defense Techniques",
+//               "Emergency Preparedness",
+//               "Online Safety Guide",
+//               "Community Support Groups",
+//               "Legal Rights Information",
+//               "Mental Health Resources",
+//             ].map((resource, index) => (
+//               <motion.div 
+//                 key={index}
+//                 initial={{ opacity: 0, x: -20 }}
+//                 animate={{ opacity: 1, x: 0 }}
+//                 transition={{ duration: 0.5, delay: index * 0.1 }}
+//                 className="bg-white p-4 rounded-lg shadow flex items-center"
+//               >
+//                 <ChevronRight className="w-6 h-6 text-purple-600 mr-2" />
+//                 <span className="text-purple-800 font-medium">{resource}</span>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Contact Form */}
+//       <section id="contact" className="py-20">
+//         <div className="container mx-auto px-4">
+//           <h2 className="text-3xl font-bold text-center mb-12 text-purple-800">Contact Us</h2>
+//           <motion.form 
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             transition={{ duration: 0.5 }}
+//             className="max-w-lg mx-auto"
+//           >
+//             <div className="mb-4">
+//               <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name</label>
+//               <input type="text" id="name" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" />
+//             </div>
+//             <div className="mb-4">
+//               <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
+//               <input type="email" id="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" />
+//             </div>
+//             <div className="mb-4">
+//               <label htmlFor="message" className="block text-gray-700 font-bold mb-2">Message</label>
+//               <textarea id="message" rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea>
+//             </div>
+//             <motion.button 
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.95 }}
+//               className="w-full bg-purple-600 text-white font-bold py-2 px-4 rounded-md hover:bg-purple-700 transition duration-300"
+//             >
+//               Send Message
+//             </motion.button>
+//           </motion.form>
+//         </div>
+//       </section>
+
+//       {/* Footer */}
+//       <footer className="bg-purple-800 text-white py-8">
+//         <div className="container mx-auto px-4">
+//           <div className="flex flex-col md:flex-row justify-between items-center">
+//             <div className="mb-4 md:mb-0">
+//               <h2 className="text-2xl font-bold">SafeHer</h2>
+//               <p className="text-sm">Empowering women's safety worldwide</p>
+//             </div>
+//             <div className="flex space-x-4">
+//               <a href="#" className="hover:text-purple-200">Privacy Policy</a>
+//               <a href="#" className="hover:text-purple-200">Terms of Service</a>
+//               <a href="#" className="hover:text-purple-200">FAQ</a>
+//             </div>
+//           </div>
+//           <div className="mt-8 text-center text-sm">
+//             © {new Date().getFullYear()} SafeHer. All rights reserved.
+//           </div>
+//         </div>
+//       </footer>
+//     </div>
+//   )
+// }
+
+
+
