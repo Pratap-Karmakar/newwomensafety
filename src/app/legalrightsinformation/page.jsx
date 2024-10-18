@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const LegalRightsInformation = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r text-zinc-800 from-purple-300 via-purple-200 to-purple-100 p-8">
+    <div className="min-h-screen bg-gradient-to-br text-zinc-800 from-purple-300 via-purple-100 to-purple-700  p-8">
       {/* Title Section */}
       <motion.div
         className="text-center mb-12"
